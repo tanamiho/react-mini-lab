@@ -1,14 +1,16 @@
+import { NavLink, Routes, Route } from "react-router-dom";
+import Day1 from "./pages/Day01";
 
-import './App.css'
-
-function App() {
+export default function App() {
   return (
-    <>
-      <div style={{ padding: 40 }}>
-        <h1>環境準備おわりー</h1>
-        <p>元気な時にいろいろアップするよー</p>
-      </div>
-    </>
-  )
+    <div style={{ padding: 16 }}>
+      <nav style={{ display: "flex", gap: 12, marginBottom: 16 }}>
+
+      </nav>
+      <Routes>
+        <Route path="/" element={<div>Home（Dayを選んでね）</div>} />
+        <Route path="/day01" element={<Day1 />} />
+      </Routes>
+    </div>
+  );
 }
-export default App
